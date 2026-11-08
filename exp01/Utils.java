@@ -5,6 +5,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.function.Supplier;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
+
 /// Class for creating random arrays of n elements of Comparable type.
 public class Utils {
 	public static final int NUMBER_RANGE = 100;
@@ -50,5 +55,17 @@ public class Utils {
 		} 
 
 		return sb.toString(); 
+	}
+
+	/// Save the given text to a CSV file.
+	/// 
+	/// @param fileName The name of the CSV file.
+	/// @param data The data to be saved in the CSV.
+	static void saveCSVDataToFile(String fileName, String data) throws IOException {
+		Files.writeString(Path.of(fileName), 
+			data,
+			StandardOpenOption.CREATE, 
+            StandardOpenOption.APPEND
+        );
 	}
 }
