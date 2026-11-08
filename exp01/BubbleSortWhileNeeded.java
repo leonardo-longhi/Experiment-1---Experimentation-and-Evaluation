@@ -13,7 +13,7 @@ public final class BubbleSortWhileNeeded<T extends Comparable<T>> implements Sor
 					items[i - 1] = items[i];
 					items[i] = item;
 					maxIndex = i;
-				}
+				} 
 			}
 			n = maxIndex;
 		} while (n > 0);
@@ -21,4 +21,3 @@ public final class BubbleSortWhileNeeded<T extends Comparable<T>> implements Sor
 	}
 	
 }
-
