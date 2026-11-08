@@ -6,7 +6,13 @@ import java.util.Random;
 public final class DoubleArraysExecTime {
 	private static final int NUMBER_RANGE = 1000000; // Range of numbers in the array.
 	
-	/// Test the performance of the Bubble Inc. sorting algorithms with random, sorted, and reverse sorted Double arrays.
+	/// Test the performance of the Bubble Inc. sorting algorithms 
+	/// with random, sorted, and reverse sorted Double arrays.
+	///
+	/// @param dimension The number of elements in the array.
+	/// @param isSorted The array is sorted.
+	/// @param reverseSorted The array is reverse sorted.
+	/// @param orderName The name of the order of the array: "Random", "Sorted", or "ReverseSorted".
 	public static void testDoubleArrayExecTime(int dimension, boolean isSorted, boolean reverseSorted, String orderName) {
 		Random random = new Random();
 		final int repetitions = 30;
@@ -71,6 +77,9 @@ public final class DoubleArraysExecTime {
 		}
 	}
 
+	/// Calculate the time taken by the Bubble Inc. sorting algorithms 
+	/// with random, sorted, and reverse sorted Double arrays
+	/// of different sizes.
 	public static void testDoubleArraysExecTime() {
 		final int limit = 100000;
 

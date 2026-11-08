@@ -4,6 +4,8 @@ import java.util.Random;
 
 public final class Experiment1 {
 
+	/// Warmup the JVM by sorting an array
+	/// with each algorithm without tracing time.
 	public final void JVMWarmup() {
 		// Sort some array without tracing time (JVM warmup).
 		Random random = new Random();

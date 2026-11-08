@@ -7,6 +7,11 @@ public final class StringArraysExecTime {
 	private static final int STRING_LENGTH = 10; // Length of the strings in the array.
 	
 	/// Test the performance of the Bubble Inc. sorting algorithms with random, sorted, and reverse sorted String arrays.
+	/// 
+	/// @param dimension The number of elements in the array.
+	/// @param isSorted The array is sorted.
+	/// @param reverseSorted The array is reverse sorted.
+	/// @param orderName The name of the order of the array: "Random", "Sorted", or "ReverseSorted".
 	public static void testStringArrayExecTime(int dimension, boolean isSorted, boolean reverseSorted, String orderName) {
 		Random random = new Random();
 		final int repetitions = 30;
@@ -34,7 +39,6 @@ public final class StringArraysExecTime {
 			long end = System.nanoTime();
 	
 			timesUntilNoChange[i] = end - start;
-		
 			
 			// Bubble sort pass per item algorithm.
 			array = startingArray.clone();
@@ -71,6 +75,9 @@ public final class StringArraysExecTime {
 		}
 	}
 
+	/// Calculate the time taken by the Bubble Inc. sorting algorithms 
+	/// with random, sorted, and reverse sorted String arrays
+	/// of different sizes.
 	public static void testStringArraysExecTime() {
 		final int limit = 100000;
 

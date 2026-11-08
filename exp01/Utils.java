@@ -14,6 +14,14 @@ import java.nio.file.StandardOpenOption;
 public class Utils {
 	public static final int NUMBER_RANGE = 100;
 
+	/// Generate an array of n elements of Comparable type.
+	/// 
+	/// @param typeClass The class of the elements in the array.
+	/// @param dimension The number of elements in the array.
+	/// @param supplier A supplier that generates the elements of the array.
+	/// @param isSorted Whether the array should be sorted.
+	/// @param isReversed Whether the array should be reversed.
+	/// @return An array of n elements of Comparable type.
 	@SuppressWarnings("unchecked")
 	public static <T extends Comparable<T>> T[] generateTArray(Class<T> typeClass, int dimension, Supplier<T> supplier, boolean isSorted, boolean isReversed) {
 		T[] array = (T[]) Array.newInstance(typeClass, dimension);
@@ -32,6 +40,9 @@ public class Utils {
 	}
 
 	/// Generate a random string of length n.
+	/// 
+	/// @param n The length of the string to generate.
+	/// @return A random alphanumerical string of length n.
 	static String getAlphaNumericString(int n) { 
 
 		// Choose a Character random from this String.
