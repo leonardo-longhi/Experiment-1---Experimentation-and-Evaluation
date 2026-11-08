@@ -1,5 +1,6 @@
 package exp01;
 
+import java.io.IOException;
 import java.util.Random;
 
 public final class Experiment1 {
@@ -34,6 +35,12 @@ public final class Experiment1 {
 
 	void main() {
 		JVMWarmup();
+
+		try {
+			Utils.saveCSVDataToFile("output.csv", "Algorithm,DataType,Dimension,Order,TimeMs\n");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		// Integer Arrays. 
 		IntegerArraysExecTime.testIntegerArraysExecTime();
