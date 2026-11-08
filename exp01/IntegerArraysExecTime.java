@@ -4,7 +4,7 @@ import java.util.Random;
 
 /// Test class for the sorting algorithms with Integers arrays.
 public final class IntegerArraysExecTime {
-	private static final int numberRange = 1000000; // Range of numbers in the array.
+	private static final int NUMBER_RANGE = 1000000; // Range of numbers in the array.
 	
 	/// Test the performance of the Bubble Inc. sorting algorithms with random, sorted, and reverse sorted Integer arrays.
 	public static void testIntegerArrayExecTime(int dimension, boolean isSorted, boolean reverseSorted) {
@@ -14,16 +14,16 @@ public final class IntegerArraysExecTime {
 		Integer[] startingArray = Utils.generateTArray(
 			Integer.class, 
 			dimension, 
-			() -> random.nextInt(numberRange), 
+			() -> random.nextInt(NUMBER_RANGE), 
 			isSorted, 
 			reverseSorted
 		);
 		
 		// Bubble sort until no change algorithm.
-		long start = System.nanoTime();
-
 		Integer[] array = startingArray.clone();
 		BubbleSortUntilNoChange<Integer> bubbleSortUntilNoChange = new BubbleSortUntilNoChange<Integer>();
+		long start = System.nanoTime();
+
 		bubbleSortUntilNoChange.sort(array);
 		
 		long end = System.nanoTime();
@@ -32,10 +32,10 @@ public final class IntegerArraysExecTime {
 		System.out.println("Bubble sort until no change: " + ((time) / 1_000_000) + "ms");
 		
 		// Bubble sort pass per item algorithm.
-		start = System.nanoTime();
-
 		array = startingArray.clone();
 		BubbleSortPassPerItem<Integer> bubbleSortPassPerItem  = new BubbleSortPassPerItem<Integer>();
+		start = System.nanoTime();
+
 		bubbleSortPassPerItem.sort(array);
 
 		end = System.nanoTime();
@@ -44,10 +44,10 @@ public final class IntegerArraysExecTime {
 		System.out.println("Bubble sort pass per item: " + ((time) / 1_000_000) + "ms");
 
 		// Bubble sort while needed algorithm.
-		start = System.nanoTime();
-
 		array = startingArray.clone();
 		BubbleSortWhileNeeded<Integer> bubbleSortWhileNeeded  = new BubbleSortWhileNeeded<Integer>();
+		start = System.nanoTime();
+
 		bubbleSortWhileNeeded.sort(array);
 
 		end = System.nanoTime();

@@ -2,7 +2,7 @@ package exp01;
 
 import java.util.Random;
 
-/// Test class for the sorting algorithms with Integers arrays.
+/// Test class for the sorting algorithms with Double arrays.
 public final class DoubleArraysExecTime {
 	private static final double NUMBER_RANGE = 1000000; // Range of numbers in the array.
 	
@@ -20,10 +20,10 @@ public final class DoubleArraysExecTime {
 		);
 		
 		// Bubble sort until no change algorithm.
-		long start = System.nanoTime();
-
 		Double[] array = startingArray.clone();
 		BubbleSortUntilNoChange<Double> bubbleSortUntilNoChange = new BubbleSortUntilNoChange<Double>();
+		long start = System.nanoTime();
+
 		bubbleSortUntilNoChange.sort(array);
 		
 		long end = System.nanoTime();
@@ -32,10 +32,10 @@ public final class DoubleArraysExecTime {
 		System.out.println("Bubble sort until no change: " + ((time) / 1_000_000) + "ms");
 		
 		// Bubble sort pass per item algorithm.
-		start = System.nanoTime();
-
 		array = startingArray.clone();
 		BubbleSortPassPerItem<Double> bubbleSortPassPerItem  = new BubbleSortPassPerItem<Double>();
+		start = System.nanoTime();
+
 		bubbleSortPassPerItem.sort(array);
 
 		end = System.nanoTime();
@@ -44,10 +44,10 @@ public final class DoubleArraysExecTime {
 		System.out.println("Bubble sort pass per item: " + ((time) / 1_000_000) + "ms");
 
 		// Bubble sort while needed algorithm.
-		start = System.nanoTime();
-
 		array = startingArray.clone();
 		BubbleSortWhileNeeded<Double> bubbleSortWhileNeeded  = new BubbleSortWhileNeeded<Double>();
+		start = System.nanoTime();
+
 		bubbleSortWhileNeeded.sort(array);
 
 		end = System.nanoTime();
