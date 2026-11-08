@@ -11,7 +11,7 @@ public final class IntegerArraysExecTime {
 		Random random = new Random();
 		
 		// Generate random array with the given 'dimension'.
-		Integer[] startingArray = Utils.generateIntegerArray(
+		Integer[] startingArray = Utils.generateTArray(
 			Integer.class, 
 			dimension, 
 			() -> random.nextInt(numberRange), 
@@ -24,7 +24,7 @@ public final class IntegerArraysExecTime {
 
 		Integer[] array = startingArray.clone();
 		BubbleSortUntilNoChange<Integer> bubbleSortUntilNoChange = new BubbleSortUntilNoChange<Integer>();
-		bubbleSortUntilNoChange.sort(startingArray);
+		bubbleSortUntilNoChange.sort(array);
 		
 		long end = System.nanoTime();
 
@@ -36,7 +36,7 @@ public final class IntegerArraysExecTime {
 
 		array = startingArray.clone();
 		BubbleSortPassPerItem<Integer> bubbleSortPassPerItem  = new BubbleSortPassPerItem<Integer>();
-		bubbleSortPassPerItem.sort(startingArray);
+		bubbleSortPassPerItem.sort(array);
 
 		end = System.nanoTime();
 
@@ -48,7 +48,7 @@ public final class IntegerArraysExecTime {
 
 		array = startingArray.clone();
 		BubbleSortWhileNeeded<Integer> bubbleSortWhileNeeded  = new BubbleSortWhileNeeded<Integer>();
-		bubbleSortWhileNeeded.sort(startingArray);
+		bubbleSortWhileNeeded.sort(array);
 
 		end = System.nanoTime();
 

@@ -10,7 +10,7 @@ public class Utils {
 	public static final int NUMBER_RANGE = 100;
 
 	@SuppressWarnings("unchecked")
-	public static <T extends Comparable<T>> T[] generateIntegerArray(Class<T> typeClass, int dimension, Supplier<T> supplier, boolean isSorted, boolean isReversed) {
+	public static <T extends Comparable<T>> T[] generateTArray(Class<T> typeClass, int dimension, Supplier<T> supplier, boolean isSorted, boolean isReversed) {
 		T[] array = (T[]) Array.newInstance(typeClass, dimension);
 	
 		for (int i = 0; i < dimension; i++) {
