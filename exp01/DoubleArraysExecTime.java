@@ -97,7 +97,6 @@ public final class DoubleArraysExecTime {
 	
 			System.out.println("Array size: " + i);
 			testDoubleArrayExecTime(i, true, false, "Sorted");	
-			
 		}
 
 		// Reverse Sorted Double arrays.

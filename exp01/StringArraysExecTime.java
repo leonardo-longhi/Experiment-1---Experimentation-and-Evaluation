@@ -95,7 +95,6 @@ public final class StringArraysExecTime {
 	
 			System.out.println("Array size: " + i);
 			testStringArrayExecTime(i, true, false, "Sorted");	
-			
 		}
 
 		// Reverse Sorted String arrays.

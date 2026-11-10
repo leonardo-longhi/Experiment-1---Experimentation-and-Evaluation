@@ -97,7 +97,6 @@ public final class IntegerArraysExecTime {
 	
 			System.out.println("Array size: " + i);
 			testIntegerArrayExecTime(i, true, false, "Sorted");	
-			
 		}
 
 		// Reverse Sorted Integer arrays.

@@ -3,6 +3,7 @@ package exp01;
 import java.io.IOException;
 import java.util.Random;
 
+/// Class for executing the experiment.
 public final class Experiment1 {
 
 	/// Warmup the JVM by sorting an array
