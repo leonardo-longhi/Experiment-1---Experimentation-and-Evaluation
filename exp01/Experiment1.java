@@ -34,8 +34,11 @@ public final class Experiment1 {
 		bubbleSortWhileNeeded.sort(array);
 	}
 
-	void main() {
-		JVMWarmup();
+	/// Main method for executing the experiment.
+	/// @param args Command line arguments.
+	public static void main(String[] args) {
+		Experiment1 experiment = new Experiment1();
+		experiment.JVMWarmup();
 
 		try {
 			Utils.saveCSVDataToFile("output.csv", "Algorithm,DataType,Dimension,Order,TimeMs\n");
